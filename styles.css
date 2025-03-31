@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: lightgreen;
+    padding: 15px;
+    text-align: center;
+}
+
+#music-list {
+    padding: 20px;
+}
+
+footer {
+    background-color: lightblue;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

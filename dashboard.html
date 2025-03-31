@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <h2>Upload Music</h2>
+    <form id="upload-form">
+        <input type="text" id="title" placeholder="Title" required>
+        <input type="text" id="artist" placeholder="Artist" required>
+        <input type="file" id="file" required>
+        <button type="submit">Upload</button>
+    </form>
+    <script>
+        document.getElementById("upload-form").addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append("file", document.getElementById("file").files[0]);
+            formData.append("title", document.getElementById("title").value);
+            formData.append("artist", document.getElementById("artist").value);
+
+            await fetch("http://localhost:5000/upload", { method: "POST", body: formData });
+            alert("Music Uploaded!");
+        });
+    </script>
+</body>
+</html>
