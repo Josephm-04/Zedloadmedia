@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://zedloadmedia.onrender.com";
 
 async function loadMusic() {
     const res = await fetch(`${API_URL}/music`);
